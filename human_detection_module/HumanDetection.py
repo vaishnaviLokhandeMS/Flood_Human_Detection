@@ -24,6 +24,10 @@ coco_labels = [
     "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"
 ]
 
+# Filter classes for human and animals
+target_classes = ["person", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe"]
+target_class_indices = [coco_labels.index(cls) for cls in target_classes]
+
 server_alert_url = "https://e87f-123-252-204-198.ngrok-free.app/test"
 person_locations = []
 
@@ -44,34 +48,32 @@ while ret:
             cls = int(result.cls.cpu().numpy()[0])
             object_name = coco_labels[cls]
 
-            confidence = result.conf.cpu().numpy().item()
+            # Only process if the detected object is human or animal
+            if cls in target_class_indices:
+                confidence = result.conf.cpu().numpy().item()
+                print(f'Detected {object_name}, ID: {tracking_id}, Confidence: {confidence:.2f}, Bounding Box: {bbox}')
 
-            print(f'Detected {object_name}, ID: {tracking_id}, Confidence: {confidence:.2f}, Bounding Box: {bbox}')
+                label = f'{object_name} {tracking_id} {confidence:.2f}'
+                (x1, y1, x2, y2) = bbox.astype(int)
+                cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
-            label = f'{object_name} {tracking_id} {confidence:.2f}'
-            (x1, y1, x2, y2) = bbox.astype(int)
-            cv2.putText(frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-
-            if object_name == "person":
-                try:
-                    latitude = 37.7749
-                    longitude = -122.4194
-
-                    data = {
-                        'latitude': latitude,
-                        'longitude': longitude
-                    }
+                # Send alert if the object is a person
+                if object_name == "person":
+                    try:
+                        latitude = 37.7749
+                        longitude = -122.4194
+                        data = {'latitude': latitude, 'longitude': longitude}
+                        
+                        response = requests.post(server_alert_url, json=data)
+                        
+                        if response.status_code == 200:
+                            print("Human detected, location buffered.")
+                        else:
+                            print(f"Failed to alert server: {response.text}")
                     
-                    response = requests.post(server_alert_url, json=data)
-                    
-                    if response.status_code == 200:
-                        print("Human detected, location buffered.")
-                    else:
-                        print(f"Failed to alert server: {response.text}")
-                
-                except Exception as e:
-                    print(f"Error sending alert to server: {e}")
+                    except Exception as e:
+                        print(f"Error sending alert to server: {e}")
     
     cv2.imshow('frame', frame)
 
