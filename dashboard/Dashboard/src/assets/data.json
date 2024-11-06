@@ -1,0 +1,171 @@
+{
+  "credentials": {
+    "OfficerLevel1": { "username": "officer1", "password": "officerpass1" },
+    "OfficerLevel2": { "username": "officer2", "password": "officerpass2" },
+    "OfficerLevel3": { "username": "officer3", "password": "officerpass3" },
+    "OfficerLevel4": { "username": "officer4", "password": "officerpass4" },
+    "OfficerLevel5": { "username": "officer5", "password": "officerpass5" }
+  },
+  "OfficerLevelData": {
+    "OfficerLevel1": [
+      {
+        "date": "2023-01-01",
+        "region": "Miraj",
+        "human": { "detected": 150, "rescued": 100, "remaining": 50 },
+        "animal": { "detected": 30, "rescued": 20, "remaining": 10 }
+      },
+      {
+        "date": "2023-02-01",
+        "region": "Tasgaon",
+        "human": { "detected": 200, "rescued": 150, "remaining": 50 },
+        "animal": { "detected": 50, "rescued": 30, "remaining": 20 }
+      },
+      {
+        "date": "2023-03-01",
+        "region": "Miraj",
+        "human": { "detected": 180, "rescued": 130, "remaining": 50 },
+        "animal": { "detected": 40, "rescued": 25, "remaining": 15 }
+      },
+      {
+        "date": "2023-04-01",
+        "region": "Tasgaon",
+        "human": { "detected": 220, "rescued": 170, "remaining": 50 },
+        "animal": { "detected": 60, "rescued": 35, "remaining": 25 }
+      },
+      {
+        "date": "2023-05-01",
+        "region": "Miraj",
+        "human": { "detected": 210, "rescued": 160, "remaining": 50 },
+        "animal": { "detected": 55, "rescued": 30, "remaining": 25 }
+      }
+    ],
+    "OfficerLevel2": [
+      {
+        "date": "2023-01-01",
+        "region": "Palus",
+        "human": { "detected": 120, "rescued": 80, "remaining": 40 },
+        "animal": { "detected": 25, "rescued": 15, "remaining": 10 }
+      },
+      {
+        "date": "2023-02-01",
+        "region": "Kadegaon",
+        "human": { "detected": 180, "rescued": 140, "remaining": 40 },
+        "animal": { "detected": 45, "rescued": 30, "remaining": 15 }
+      },
+      {
+        "date": "2023-03-01",
+        "region": "Palus",
+        "human": { "detected": 160, "rescued": 110, "remaining": 50 },
+        "animal": { "detected": 35, "rescued": 20, "remaining": 15 }
+      },
+      {
+        "date": "2023-04-01",
+        "region": "Kadegaon",
+        "human": { "detected": 200, "rescued": 160, "remaining": 40 },
+        "animal": { "detected": 55, "rescued": 35, "remaining": 20 }
+      },
+      {
+        "date": "2023-05-01",
+        "region": "Palus",
+        "human": { "detected": 190, "rescued": 150, "remaining": 40 },
+        "animal": { "detected": 50, "rescued": 30, "remaining": 20 }
+      }
+    ],
+    "OfficerLevel3": [
+      {
+        "date": "2023-01-01",
+        "region": "Jat",
+        "human": { "detected": 160, "rescued": 120, "remaining": 40 },
+        "animal": { "detected": 35, "rescued": 20, "remaining": 15 }
+      },
+      {
+        "date": "2023-02-01",
+        "region": "Shirala",
+        "human": { "detected": 220, "rescued": 180, "remaining": 40 },
+        "animal": { "detected": 60, "rescued": 40, "remaining": 20 }
+      },
+      {
+        "date": "2023-03-01",
+        "region": "Jat",
+        "human": { "detected": 200, "rescued": 160, "remaining": 40 },
+        "animal": { "detected": 55, "rescued": 30, "remaining": 25 }
+      },
+      {
+        "date": "2023-04-01",
+        "region": "Shirala",
+        "human": { "detected": 240, "rescued": 200, "remaining": 40 },
+        "animal": { "detected": 70, "rescued": 50, "remaining": 20 }
+      },
+      {
+        "date": "2023-05-01",
+        "region": "Jat",
+        "human": { "detected": 230, "rescued": 190, "remaining": 40 },
+        "animal": { "detected": 65, "rescued": 45, "remaining": 20 }
+      }
+    ],
+    "OfficerLevel4": [
+      {
+        "date": "2023-01-01",
+        "region": "Kavathe Mahankal",
+        "human": { "detected": 140, "rescued": 100, "remaining": 40 },
+        "animal": { "detected": 20, "rescued": 15, "remaining": 5 }
+      },
+      {
+        "date": "2023-02-01",
+        "region": "Walwa",
+        "human": { "detected": 190, "rescued": 150, "remaining": 40 },
+        "animal": { "detected": 40, "rescued": 25, "remaining": 15 }
+      },
+      {
+        "date": "2023-03-01",
+        "region": "Kavathe Mahankal",
+        "human": { "detected": 170, "rescued": 120, "remaining": 50 },
+        "animal": { "detected": 30, "rescued": 20, "remaining": 10 }
+      },
+      {
+        "date": "2023-04-01",
+        "region": "Walwa",
+        "human": { "detected": 210, "rescued": 160, "remaining": 50 },
+        "animal": { "detected": 50, "rescued": 30, "remaining": 20 }
+      },
+      {
+        "date": "2023-05-01",
+        "region": "Kavathe Mahankal",
+        "human": { "detected": 200, "rescued": 150, "remaining": 50 },
+        "animal": { "detected": 45, "rescued": 25, "remaining": 20 }
+      }
+    ],
+    "OfficerLevel5": [
+      {
+        "date": "2023-01-01",
+        "region": "Khanapur",
+        "human": { "detected": 170, "rescued": 130, "remaining": 40 },
+        "animal": { "detected": 30, "rescued": 20, "remaining": 10 }
+      },
+      {
+        "date": "2023-02-01",
+        "region": "Atpadi",
+        "human": { "detected": 210, "rescued": 160, "remaining": 50 },
+        "animal": { "detected": 50, "rescued": 35, "remaining": 15 }
+      },
+      {
+        "date": "2023-03-01",
+        "region": "Khanapur",
+        "human": { "detected": 190, "rescued": 140, "remaining": 50 },
+        "animal": { "detected": 45, "rescued": 30, "remaining": 15 }
+      },
+      {
+        "date": "2023-04-01",
+        "region": "Atpadi",
+        "human": { "detected": 230, "rescued": 180, "remaining": 50 },
+        "animal": { "detected": 55, "rescued": 40, "remaining": 15 }
+      },
+      {
+        "date": "2023-05-01",
+        "region": "Khanapur",
+        "human": { "detected": 220, "rescued": 170, "remaining": 50 },
+        "animal": { "detected": 60, "rescued": 45, "remaining": 15 }
+      }
+    ]
+  }
+}

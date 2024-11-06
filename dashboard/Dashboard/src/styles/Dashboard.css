@@ -1,0 +1,86 @@
+/* Dashboard Container */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.summary-card {
+    background: #f0f4f8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    /* Adjusted for 4 cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .summary-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary-card {
+        flex: 1 1 80%;
+        /* Stacks cards on smaller screens */
+    }
+}
+
+/* Chart Containers */
+.chart-container {
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    height: 350px;
+}
+
+.chart-container h3 {
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin: 1px;
+}
+
+/* Logout Button */
+.logout-button {
+    width: 100px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    align-self: center;
+}
+
+.logout-button:hover {
+    background-color: #e04345;
+    transform: scale(1.05);
+}
