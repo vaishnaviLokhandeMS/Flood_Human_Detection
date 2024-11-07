@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306545939469",
+    "project_id": "floodhumandetection",
+    "storage_bucket": "floodhumandetection.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306545939469:android:b80c0220dc06abff4f3144",
+        "android_client_info": {
+          "package_name": "com.example.demouiview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyr-PRLAbi791_e6AeTJT1x85BcCb0298"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
